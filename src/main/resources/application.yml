@@ -1,0 +1,20 @@
+server:
+  port: 8080
+spring:
+  mail:
+    host: smtp.163.com #邮箱服务器地址
+    username: 17736551235@163.com
+    password: zq17736551235 #非邮箱password  为第三方登录的授权密码(邮箱端自己设定)
+    default-encoding: utf-8
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/jtdb?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf8&autoReconnect=true&allowMultiQueries=true
+    username: root
+    password: root
+    type: com.alibaba.druid.pool.DruidDataSource
+mybatis-plus:
+  mapper-locations: classpath:/mapper/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+  type-aliases-package: com.example.maildemo.pojo
